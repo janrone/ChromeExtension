@@ -1,0 +1,25 @@
+{
+   "background": {
+      "page": "background.html",
+      "persistent": true
+   },
+   "default_locale": "en",
+   "description": "__MSG_description__",
+   "icons": {
+      "128": "images/install_logo.png",
+      "48": "images/extension_logo.png"
+   },
+   "browser_action" : {
+    "default_icon" : "images/extension_logo.png"
+   },
+   "content_scripts": [ {
+   "js": [ "jquery.min.js","cjs.js"],
+   "matches": [ "*://www.miucheng.com/*","file://*" ]
+   }],
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1Hsmyb/JolMqc33u+6s9gVK45byX2XJpk7dhXyKCJTXhw9HO9m1O+cnr9xQJw2YeMJAaxXOYPOoX/BDI21hKoCRYWKNdJDfWWB90f0+uXqk4hMGdnhTNhAu7ki1fWHF8QTh76SVNTlj/4uXTPFutOhzk+MdAAucyFiWctVfhFN+nhbNyMe/ny/P5nZUvFLhwA6a7jFM+d/zC1p0ixtS5uiobIaG1jpaEaUBbinYi969AG/xvvx8V7OmMrJ1Xn9JFMfZB8WIUdEcetOIze5lP7ayBW0ZkrOqdVAp2ck7raSF/r1isiNdm1MsfR1VfklblGEFhmJl1rh07y+OToHkgTQIDAQAB",
+   "manifest_version": 2,
+   "name": "__MSG_name__",
+   "permissions": [ "tabs", "\u003Call_urls>", "nativeMessaging", "storage" ],
+   //"update_url": "https://clients2.google.com/service/update2/crx",
+   "version":"1.0.1"
+}

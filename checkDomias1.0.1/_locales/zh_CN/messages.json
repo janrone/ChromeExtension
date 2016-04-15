@@ -1,0 +1,11 @@
+{
+   "default_title": {
+      "message": "360网盾批量检测域名"
+   },
+   "description": {
+      "message": "360网盾批量检测域名"
+   },
+   "name": {
+      "message": "域名检测"
+   }
+}
