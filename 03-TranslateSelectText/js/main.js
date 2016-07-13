@@ -90,11 +90,17 @@ let translate = word => {
 }
 
 let showPop = e => {
-	let word = getWord()
-	if (!word) return;
-	ex = e.pageX
-	ey = e.pageY
-	translate(word)
+	chrome.extension.sendMessage({'get': 'status'}, function(response) {
+	//console.log(response.status+"");
+	if ('off' !== response.status) {
+		let word = getWord()
+		if (!word) return;
+		ex = e.pageX;
+		ey = e.pageY;
+		translate(word);
+	}
+});
+	
 }
 
 let removePop = () => {
@@ -109,8 +115,8 @@ let stylContent = document.createTextNode("#popupShanbay{display: block !importa
 
 styl.styleSheet ? (styl.styleSheet.cssText = stylContent.nodeValue) : styl.appendChild(stylContent)
 	
-body = document.getElementsByTagName("body")[0]
-document.getElementsByTagName("head")[0].appendChild(styl)
-document.body.removeEventListener("dblclick")
-document.body.addEventListener("dblclick",showPop,false)
-document.addEventListener("click",removePop,false)
+body = document.getElementsByTagName("body")[0];
+document.getElementsByTagName("head")[0].appendChild(styl);
+document.body.removeEventListener("dblclick", null);
+document.body.addEventListener("dblclick",showPop,false);
+document.addEventListener("click",removePop,false);
