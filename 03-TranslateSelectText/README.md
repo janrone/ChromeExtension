@@ -1,32 +1,24 @@
-# 扇贝翻译chrome插件
+## Translate Select Text
 
-本插件是基于扇贝API而开发的chrome浏览器英语翻译插件
-
-## 功能
-
-安装好插件之后，在单词上双击，插件会根据选中的单词调用扇贝API进行翻译，并将翻译后的结果显示出来
-
-## 浏览器支持
-
-+ chrome45+（仅适用于支持fetch方法的浏览器）
+1,翻译API-扇贝
+2,仅适用于支持fetch方法的浏览器
+![](images/fetchsupport.png)
 
 ## 安装方法
+第一种
+	下载本项目
 
-1. 下载本项目
+	打开chrome浏览器“扩展程序”，勾选上“开发者模式”开启开发者模式，点击“打包扩展程序”，选中到刚刚下	载的目录，生成.crx插件
+
+	将生成的插件拖到“扩展程序”中即可
+
+第二种
+	打开chrome浏览器“扩展程序”，勾选上“开发者模式”开启开发者模式，点击“加载已解压的扩展程序...	  ”，选择下载代码解压的文件夹即可。
 	
-	> git clone https://github.com/willwong123/shanBayTranslateChromeExtention.git
-
-2. 在chrome中打包插件
-
-	> 打开chrome浏览器“扩展程序”，勾选上“开发者模式”开启开发者模式，点击“打包扩展程序”，选中到刚刚下载的目录，生成`.crx`插件
-	
-3. 安装插件
-
-	> 将生成的插件拖到“扩展程序”中即可
-
 ## 鸣谢
 
-感谢扇贝API
+https://github.com/willwong123/shanBayTranslateChromeExtention
+
 
 ## License
 
